@@ -37,6 +37,8 @@ class Squr:
         self.nx, self.ny = self.next_xy()
 
     def start(self):
+        if not self.can_move():
+            self.turn_dir()
         while(self.can_move()):
             self.fill()
             self.move()
